@@ -19,12 +19,16 @@ def read_QRcodes(frame):
 
 # read the medical image with the QR coded name
 def get_image(coded_name):
-    file_name = str(coded_name)+".jpeg"
+    file_name = coded_name+".jpeg"
     img = cv2.imread(file_name, cv2.IMREAD_GRAYSCALE)
     cv2.imshow('image', img)
+    file_name1 = "p0001cX.jpeg"
+    img1 = cv2.imread(file_name1, cv2.IMREAD_GRAYSCALE)
+    cv2.imshow('image1', img1)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
+get_image("p0000cX")
 
 # get data from camera
 def main():
